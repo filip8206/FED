@@ -19,7 +19,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Filip Hensels
 
   #### Je startniveau:
-  Rood
+  <span style="color:red">Rood</span>
 
   #### Je focus:
   Surface Plane
