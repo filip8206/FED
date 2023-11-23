@@ -57,6 +57,10 @@
 /* JOUW STYLING */
 /****************/
 
+.noDisplay {
+	display: none;
+}
+
 body { 
 	padding: 0;
 	margin: 0;
@@ -69,12 +73,15 @@ header {
 	/* position: sticky; */
 	justify-content: center;
 	height: 4.375em;
-	border-bottom: solid 2px var(--color-secondary-grey);
 	background-color: var(--color-background-snow);
 	align-items: center;
 	position: fixed;
 	width: 100vw;
 
+}
+
+header.scroll {
+	border-bottom: solid 2px var(--color-secondary-grey);
 }
 
 header img {
@@ -87,7 +94,9 @@ main {
 	justify-content: center;
 	flex-wrap: wrap;
 	text-align: center;
-	padding-top: 11.375em;
+	padding-top: 10em;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
 }
 
 main img {
@@ -97,7 +106,9 @@ main img {
 h1 {
 	font-family: DINNext, Arial, Helvetica, sans-serif;
 	font-weight: 500;
-	margin-bottom: 3.5em;
+	/* margin-bottom: 3em; */
+	font-size: 2em;
+	height: 20vh;
 }
 
 h2 {
@@ -114,17 +125,21 @@ p {
 	color: #777;
 }
 
-section {
-	margin-top: 5em;
+
+section:first-of-type  {
+	/* margin-top: 20vh; */
+	/* height: 100vh; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-section a {
+section p a {
 	color: var(--color-secondary-blue);
 	font-weight: 500;
-
 }
 
-a.primary {
+section > a, header a {
 	text-transform: uppercase;
 	color: var(--color-background-snow);
 	background-color: var(--color-feather-green);
@@ -138,14 +153,15 @@ a.primary {
 	font-weight: 500;
 	letter-spacing: 0.05em;
 	margin-bottom: 1em;
+	font-size: 0.95em;
 }
 
-a.primary:active {
+a:active {
 	box-shadow: none;
 	transform: translateY(4px) translateZ(0);
 }
 
-a.secondary {
+a:nth-of-type(2) {
 	text-transform: uppercase;
 	border-radius: 0.75em;
 	height: 3.125em;
@@ -160,9 +176,18 @@ a.secondary {
 	border: 2px solid var(--color-secondary-grey);
 	color: var(--color-secondary-blue);
 	box-shadow: 0 2px 0 var(--color-secondary-grey);
+	font-size: 0.95em;
+
 }
 
-a.secondary:active {
+a:nth-of-type(2):active {
 	box-shadow: none;
 	transform: translateY(2px) translateZ(0);
+}
+
+header a {
+	height: 2.5em;
+	width: auto;
+	padding: 1em;
+	margin: 0;
 }
