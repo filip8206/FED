@@ -99,7 +99,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   | Header         | Background image   | Paddings en witruimte   |
   | genres onder elkaar | Pagina in blokjes | Misschien intersection observer |
 
-
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
