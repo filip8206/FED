@@ -13,6 +13,10 @@ function headerScroll () {
     }
 }
 
+function headerGetStartedScroll () {
+    
+}
+
 const headerScrollObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => headerScroll
     )

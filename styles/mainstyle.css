@@ -10,12 +10,15 @@
 /*********************/
 :root {
 	--color-text-eel:#4b4b4b;
+	--color-text-marine:#052C60;
 	--color-background-snow:#ffffff;
 	--color-feather-green: #58cc02;
 	--color-mask-green: #89e219;
 	--color-secondary-blue: #1cb0f6;
 	--color-secondary-grey: #E5E5E5;
 	--color-buttonborder-green: rgb(88,167,0);
+	--color-superduolingo: #100F3E;
+	--color-superduolingo-buttonshadow: #88879F;
 }
 
 @font-face {
