@@ -1,26 +1,45 @@
 // JavaScript Document
-console.log("hi")
+console.log("hi");
 
-var eersteSection = document.querySelector("section:first-of-type")
-var headerElement = document.querySelector("header")
+var eersteSection = document.querySelector("section:first-of-type");
+var headerElement = document.querySelector("header");
 
-function headerScroll () {
-    const intersecting = entry.isIntersecting
+var eersteSectionLink = document.querySelector("section:first-of-type a:first-of-type");
+var headerGetStartedLink = document.querySelector("header a:last-of-type");
+var headerImage = document.querySelector("header img");
+
+function headerScroll(entry) {
+    const intersecting = entry.isIntersecting;
     if (intersecting == true) {
-        headerElement.classList.remove("scroll")
+        headerElement.classList.remove("scroll");
     } else if (intersecting == false) {
-        headerElement.classList.add("scroll")
+        headerElement.classList.add("scroll");
     }
 }
 
-function headerGetStartedScroll () {
-    
+const headerScrollObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => headerScroll(entry));
+}, { threshold: 1 });
+
+headerScrollObserver.observe(eersteSection);
+
+
+
+function headerScrollButton (entry) {
+    const intersecting = entry.isIntersecting;
+    if (intersecting == true) {
+        headerGetStartedLink.classList.add("noDisplay");
+        headerImage.src = "./images/logotext.svg";
+        headerElement.classList.remove("scrollVerder");
+    } else if (intersecting == false) {
+        headerGetStartedLink.classList.remove("noDisplay");
+        headerImage.src = "./images/logoicon.svg";
+        headerElement.classList.add("scrollVerder");
+    }
 }
 
-const headerScrollObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => headerScroll
-    )
-},{ treshold: 0.01 },{rootMargin:"100px"})
+const headerScrollButtonObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => headerScrollButton(entry));
+}, { threshold: 1 });
 
-headerScrollObserver.observe(eersteSection)
-
+headerScrollButtonObserver.observe(eersteSectionLink);

@@ -14,11 +14,22 @@
 	--color-background-snow:#ffffff;
 	--color-feather-green: #58cc02;
 	--color-mask-green: #89e219;
+
 	--color-secondary-blue: #1cb0f6;
 	--color-secondary-grey: #E5E5E5;
+	--color-secondary-turqoise: #02AF85;
+
 	--color-buttonborder-green: rgb(88,167,0);
 	--color-superduolingo: #100F3E;
+	--color-learnanywhere: #DDF4FF;
 	--color-superduolingo-buttonshadow: #88879F;
+	--color-footer-heading: #D7FFB8;
+	--color-footer-p: #A6ED6E;  
+	--color-turqoise-dark: #068C6B;
+
+	--color-focus-border: #000000;
+
+	--button-border-radius: 0.75em;
 }
 
 @font-face {
@@ -68,4 +79,10 @@ body {
 
 a {
 	text-decoration: none;
+}
+
+:focus {
+	border: 0.125rem solid var(--color-focus-border);
+	border-radius: 0.25rem;
+	outline: none;
 }

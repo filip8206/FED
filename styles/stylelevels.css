@@ -1,0 +1,113 @@
+header {
+    top: 0;
+    margin: 0;
+    background-color: var(--color-secondary-turqoise);
+    color: var(--color-background-snow);
+    font-weight: 600;
+    border-bottom: 0.125rem solid var(--color-turqoise-dark);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header ul li {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: 0.6em;
+}
+
+header ul li img {
+    height: 1.875rem;
+    margin-right: 0.3em;
+}
+
+header ul li:first-of-type img {
+    height: 2.3rem;
+}
+
+header ul li:nth-of-type(2) {
+    color: var(--color-turqoise-dark);
+}
+
+header ul li:last-of-type img {
+    height: 2rem;
+}
+
+header ul li p {
+    margin: 0;
+    font-size: 1.05em;
+}
+
+header h1 {
+    font-size: 1.2em;
+    font-weight: 500;
+    padding-top: 0.7em;
+    padding-bottom: 0.5em;
+    text-align: center;
+}
+
+main {
+    padding-top: 8.125rem;
+}
+
+section:nth-of-type(1) {
+    background-color: var(--color-feather-green);
+    display: grid;
+    padding: 1em;
+    grid-template-columns: 1fr max-content;
+    grid-template-rows: max-content max-content;
+    row-gap: 0.2em;
+    color: var(--color-background-snow);
+}
+
+section:nth-of-type(1) h2 {
+    margin: 0;
+    font-size: 1.5625em;
+}
+
+section:nth-of-type(1) p {
+    order: 1;
+    margin: 0;
+    font-size: 1.1875em;
+    font-weight: 300;
+}
+
+section:nth-of-type(1) a {
+    margin: 0;
+    width: fit-content;
+    height: max-content;
+    grid-row: span 2;
+    align-items: center;
+    border: 0.125rem solid var(--color-buttonborder-green);
+    border-radius: var(--button-border-radius);
+    box-shadow: 0 0.125rem 0 var(--color-buttonborder-green);
+}
+
+section:nth-of-type(1) img {
+    margin: 0.75em;
+}
+
+main ul {
+    list-style-type: none;
+}
+
+main ul li button {
+    background-color: var(--color-feather-green);
+    box-shadow: 0 0.5rem 0 var(--color-buttonborder-green);
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    height: 3.5625rem;
+    width: 4.375rem;
+}

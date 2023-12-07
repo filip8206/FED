@@ -9,10 +9,20 @@ header {
 	left:0;
 	right:0;
 	top:0;
+    border-bottom: none;
+    transition: smooth 0.5s;
 }
 
 header.scroll {
-	border-bottom: solid 2px var(--color-secondary-grey);
+	border-bottom: solid 0.125rem var(--color-secondary-grey);
+    height: 4.5rem;
+    transition: smooth 0.5s;
+}
+
+header.scrollVerder {
+    justify-content: space-between;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 header img {
@@ -83,7 +93,7 @@ section > a, header a {
 	color: var(--color-background-snow);
 	background-color: var(--color-feather-green);
 	box-shadow: 0 0.25rem 0 var(--color-buttonborder-green);
-	border-radius: 0.75em;
+	border-radius: var(--button-border-radius);
 	height: 3.125em;
 	width: 20.625rem;
 	display: flex;
@@ -105,9 +115,9 @@ a:active {
 	transform: translateY(0.25rem) translateZ(0);
 }
 
-a:nth-of-type(2) {
+main a:nth-of-type(2),section:nth-of-type(6) a {
 	text-transform: uppercase;
-	border-radius: 0.75em;
+	border-radius: var(--button-border-radius);
 	height: 3.125em;
 	width: 20.625rem;
 	display: flex;
@@ -136,12 +146,15 @@ header a {
 	margin: 0;
 }
 
+/* learnanywhere section */
+
 section:nth-of-type(4) {
     flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100dvh;
+    padding: 0;
 }
 
 section:nth-of-type(4) h2 {
@@ -192,6 +205,18 @@ section:nth-of-type(4) p:first-of-type {
     align-self: end;
 }
 
+section:nth-of-type(4) > img {
+    width: 100dvw;
+    height: 65dvh;
+    margin-top: -10dvh;
+    margin-bottom: -20dvh;
+    object-fit: cover;
+    object-position: -5rem;
+    max-width: none;
+}
+
+/* Superduolingo section */
+
 section:nth-of-type(5) {
     flex-direction: column;
     display: flex;
@@ -222,7 +247,70 @@ section:nth-of-type(5) a:active {
     box-shadow: none;
 }
 
+section:nth-of-type(6),section:nth-of-type(7) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+section:nth-of-type(7) {
+    padding: 0;
+    margin: 0;
+}
+
+section:nth-of-type(7) img {
+    width: 100dvw;
+    height: 40dvh;
+    margin-top: -10dvh;
+    margin-bottom: -0.1rem;
+    object-fit: cover;
+    max-width: none;
+}
+
+footer {
+    background-color: var(--color-feather-green);
+    margin: 0;
+    padding: 2em;
+    padding-top: 5em;
+}
+
+footer h3 {
+    color: var(--color-footer-heading);
+    font-size: 1.2em;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    gap: 0.75;
+}
+
+footer ul li {
+    margin-bottom: 0.75em;
+    font-weight: 600;
+}
+
+footer ul li a {
+    color: var(--color-footer-p);
+}
+
+footer h3:last-of-type {
+    font-size: 1em;
+    margin-top: 2em;
+}
+
+footer ul:last-of-type {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+
+footer img {
+    width: 4rem;
+    height: 4rem;
+}
+
+/* class voor het verbergen van elementen behalve voor de screen reader */
 .visually-hidden {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
@@ -231,4 +319,16 @@ section:nth-of-type(5) a:active {
     position: absolute;
     white-space: nowrap;
     width: 1px;
+  }
+
+  /* Class voor het verbergen en laten zien van de skip to content button */
+  header a:first-of-type {
+    left: 0;
+    padding: 0.5em;
+    position: absolute;
+    transform: translateX(-300%);
+  }
+  
+  header a:first-of-type:focus {
+    transform: translateX(0%);
   }
