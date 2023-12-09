@@ -175,7 +175,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   | Suzanne      | Naomi          | Constant    | Filip        |
   | ---            | ---                | ---          | ---              |
   | Animatie die buiten het beeld valt| ...| Screenreader verbeteren | Hoe je een tekstwolkje maakt    |
-  | Skill animation | ... | ... | Pop-up wolkje |
+  | Skill animation | ...                | ...              | Pop-up wolkje |
   | ...            | ...                | ...          | ...              |
 
 

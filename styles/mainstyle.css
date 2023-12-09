@@ -16,20 +16,71 @@
 	--color-mask-green: #89e219;
 
 	--color-secondary-blue: #1cb0f6;
+	--color-secondary-blue-semitransparent: #1cb1f690;
+	--color-secondary-blue-transparent: #1cb1f627;
+
 	--color-secondary-grey: #E5E5E5;
 	--color-secondary-turqoise: #02AF85;
+	--color-turqoise-dark: #068C6B;
+	--color-secondary-purple: #CE82FF;
+	--color-purple-dark: #A567CC;
 
-	--color-buttonborder-green: rgb(88,167,0);
+	--color-buttonborder-green: #58A700;
 	--color-superduolingo: #100F3E;
 	--color-learnanywhere: #DDF4FF;
 	--color-superduolingo-buttonshadow: #88879F;
 	--color-footer-heading: #D7FFB8;
-	--color-footer-p: #A6ED6E;  
-	--color-turqoise-dark: #068C6B;
+	--color-footer-p: #A6ED6E;
 
 	--color-focus-border: #000000;
 
-	--button-border-radius: 0.75em;
+	--color-levels-locked-background: #E5E5E5;
+	--color-levels-locked-shadow: #B7B7B7;
+	
+	--color-greyongrey: #AFAFAF;
+	--color-darkgrey: #777777;
+
+	--button-border-radius: 0.75rem;
+
+
+	--color-white: #FFFFFF
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-text-eel:#F1F7FB;
+		--color-text-marine:#79a6e1;
+		--color-background-snow:#121E24;
+		--color-feather-green: #58cc02;
+		--color-mask-green: #89e219;
+	
+		--color-secondary-blue: #1cb0f6;
+		--color-secondary-blue-semitransparent: #1cb1f690;
+		--color-secondary-blue-transparent: #1cb1f627;
+	
+		--color-secondary-grey: #37464F;
+		--color-secondary-turqoise: #02AF85;
+		--color-turqoise-dark: #068C6B;
+		--color-secondary-purple: #CE82FF;
+		--color-purple-dark: #A567CC;
+	
+		--color-buttonborder-green: #58A700;
+		--color-superduolingo: #100F3E;
+		--color-learnanywhere: #DDF4FF;
+		--color-superduolingo-buttonshadow: #88879F;
+		--color-footer-heading: #D7FFB8;
+		--color-footer-p: #A6ED6E;
+	
+		--color-focus-border: #000000;
+	
+		--color-levels-locked-background: #37464F;
+		--color-levels-locked-shadow: #2A373F;
+		
+		--color-greyongrey: #AFAFAF;
+		--color-darkgrey: #777777;
+	
+		--button-border-radius: 0.75rem;
+	}
 }
 
 @font-face {
@@ -75,14 +126,15 @@ body {
 	margin: 0;
 	font-family: DINNext, Arial, Helvetica, sans-serif;
 	color: var(--color-text-eel);
+	background-color: var(--color-background-snow);
 }
 
 a {
 	text-decoration: none;
 }
 
-:focus {
+/* :focus {
 	border: 0.125rem solid var(--color-focus-border);
 	border-radius: 0.25rem;
 	outline: none;
-}
+} */
