@@ -129,7 +129,8 @@ Deze bevindingen van de originele website van Duolingo valt er te zien dat er no
 
   ### Stand van zaken
   Deze week heb ik de homepage helemaal afgemaakt. Alleen moet ik de Scroll-animaties nog werkend krijgen, en heb ik bij de Learn anywhere, anytime section en boven de footer nog 2 SVG afbeeldingen over elkaar heen plaatsen en inzoomen zodat ze buiten zodat niet de hele breedte te zien is, maar breder wordt bij een breder scherm.
-  <img src="./readme-images/voortgang2.jpg" alt="Afbeelding die anders eruit zou moeten zien">
+
+  <img src="./readme-images/voortgang2.jpg" width="375px" alt="Afbeelding die anders eruit zou moeten zien">
 
 
   ### Agenda voor meeting
@@ -206,7 +207,9 @@ Deze bevindingen van de originele website van Duolingo valt er te zien dat er no
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/karakteristiek1.jpg" width="200px" alt="Levels pagina in light mode">
+  <img src="readme-images/karakteristiek2.jpg" width="200px" alt="Levels pagina in dark mode">
+  <img src="readme-images/karakteristiek3.jpg" width="200px" alt="Levels pagina in hoog contrast mode">
 
 
   ### Dit ging goed/Heb ik geleerd: 
@@ -217,6 +220,7 @@ Deze bevindingen van de originele website van Duolingo valt er te zien dat er no
 
   ### Dit was lastig/Is niet gelukt:
   De elementen waar ik JavaScript bij nodig had vond ik nog best wel lastig. Met name de intersection observer. Bij de learn anywhere, anytime section was het de bedoeling om daar een blauwe achtergrond aan toe te voegen die steeds blauwer werd, naarmate je verder scrollde. Ook zou de header uit beeld moeten verdwijnen bij die section en die daarna van Superduolingo. Het is mij helaas niet gelukt om dat zo te programmeren in JavaScript.
+
   <img src="readme-images/voortgang4.jpg" width="375px" alt="Learn anywhere, anytime pagina zonder blauwe achtergrond met de header in beeld.">
 </details>
 
