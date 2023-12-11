@@ -37,6 +37,10 @@ header ul li:first-of-type img {
     height: 2.3rem;
 }
 
+header ul li:nth-of-type(2) img {
+    filter: brightness(0%) opacity(20%);
+}
+
 header ul li:nth-of-type(2) {
     color: var(--color-turqoise-dark);
 }
@@ -97,14 +101,21 @@ section:nth-of-type(2) a {
     align-self: center;
     justify-self: center;
     border: 0.125rem solid var(--color-buttonborder-green);
+    background-color: var(--color-feather-green);
     border-radius: 1em;
     box-shadow: 0 0.125rem 0 var(--color-buttonborder-green);
+}
+
+section:nth-of-type(1) a:hover,
+section:nth-of-type(2) a:hover {
+    filter: brightness(104%);
 }
 
 section:nth-of-type(1) a:active,
 section:nth-of-type(2) a:active {
     box-shadow: none;
     transform: translateY(0.125rem);
+    outline: none;
 }
 
 section:nth-of-type(1) img,
@@ -118,6 +129,7 @@ section:nth-of-type(2) {
 }
 
 section:nth-of-type(2) a {
+    background-color: var(--color-secondary-purple);
     border: 0.125rem solid var(--color-purple-dark);
     box-shadow: 0 0.125rem 0 var(--color-purple-dark);
 }
@@ -175,6 +187,43 @@ main ul li:first-of-type button {
     font: inherit;
 }
 
+/* ANIMATIE VOOR LOCKED LEVELS */
+@keyframes lockedLevelClick {
+    10% {
+        transform: translateX(-1em);
+    }
+
+    30% {
+        transform: translateX(1em);
+    }
+
+    50% {
+        transform: translateX(-0.5em);
+    }
+
+    70% {
+        transform: translateX(0.5em);
+    }
+
+    90% {
+        transform: translateX(-0.2em);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+main ul li button:active img {
+    animation-name: lockedLevelClick;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+main ul li:first-of-type button:active img {
+    animation:none
+}
+
 /* START WOLKJE */
 main ul li:first-of-type button p {
     position: absolute;
@@ -229,9 +278,14 @@ main ul li:first-of-type button p::after {
     }
 }
 
+main ul li:first-of-type button:hover {
+    filter: brightness(104%);
+}
+
 main ul li button:active {
     box-shadow: none;
     transform: translateY(0.5rem);
+    outline: none;
 }
 
 /* GOLF EFFECT LEVELS */
@@ -293,6 +347,12 @@ main ul:nth-of-type(2) li:last-of-type {
     z-index: 10;
 }
 
+main ul:nth-of-type(2) li:first-of-type button:active {
+    box-shadow: none;
+    transform: translateY(0.5rem);
+    outline: none;
+}
+
 main ul:nth-of-type(2) {
     margin-bottom: -1.5em;
 }
@@ -326,7 +386,6 @@ section:last-of-type h2 {
 
 section:last-of-type h2::before {
     content: url(../images/icons/lock2.svg);
-    /* background-size: 1.3125em 1.5625em; */
     display: inline-block;
     transform: scale(1.5);
     margin-right: 0.3em;
@@ -359,9 +418,14 @@ main section:last-of-type a {
     font-size: 0.95em;
 }
 
+main section:last-of-type a:hover {
+    filter: brightness(104%);
+}
+
 main section:last-of-type a:active {
     box-shadow: none;
     transform: translateY(0.125rem) translateZ(0);
+    outline: none;
 }
 
 /* FOOTER NAV BAR */
@@ -391,6 +455,14 @@ footer ul li {
     justify-content: center;
 }
 
+footer ul li a:hover img {
+    filter: brightness(104%);
+}
+
+footer ul li a:active img {
+    filter: brightness(90%);
+}
+
 footer ul li img {
     width: 3.125em;
     height: 3.125em;
@@ -400,6 +472,36 @@ footer ul li:first-of-type img {
     border: solid 0.125rem var(--color-secondary-blue-semitransparent);
     background-color: var(--color-secondary-blue-transparent);
     border-radius: 0.625rem;
+}
+
+footer>a {
+    width: 3.125rem;
+    height: 3.125rem;
+    background-color: var(--color-background-snow);
+    border-radius: 1rem;
+    position: absolute;
+    z-index: 20;
+    bottom: 120%;
+    right: 4%;
+    border: 0.125rem solid var(--color-secondary-grey);
+    box-shadow: 0 0.125rem 0 var(--color-secondary-grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+footer>a:hover {
+    filter: brightness(104%);
+}
+
+footer>a:active {
+    box-shadow: none;
+    transform: translateY(0.125em);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -417,7 +519,73 @@ footer ul li:first-of-type img {
         filter: opacity(35%);
     }
 
-    main ul:first-of-type li:nth-of-type(3)>img,main ul li:first-of-type button img {
+    main ul:first-of-type li:nth-of-type(3)>img,
+    main ul li:first-of-type button img {
         filter: none;
+    }
+
+    a:hover,
+    ul li:first-of-type button:hover,
+    footer>a:hover {
+        filter: brightness(120%) !important;
+    }
+}
+
+@media (prefers-contrast: more) {
+    * {
+        box-shadow: none !important;
+        background-color: #000000 !important;
+        color: #FFFFFF !important;
+    }
+
+    a {
+        border: 0.125em solid #FFFFFF !important;
+    }
+
+    button {
+        outline: 0.125em solid #FF00FF !important;
+        border: none !important;
+    }
+
+    button p {
+        border: 0.125em solid #FF00FF !important;
+    }
+
+    button img,
+    li button img {
+        filter: brightness(200%) !important;
+    }
+
+    li>img {
+        filter: brightness(100%) contrast(120%) !important;
+    }
+
+    header {
+        border-bottom: 0.125em solid #FFFFFF !important;
+    }
+
+    header ul li:nth-of-type(2) img {
+        filter: brightness(100%) invert(0) !important;
+    }
+
+    section a {
+        border: 0.125em solid #FF00FF !important;
+    }
+
+    section:last-of-type {
+        border: 0.125em solid #FFFFFF;
+    }
+
+    footer li:first-of-type img {
+        background-color: #FFFFFF !important;
+        border: none !important;
+    }
+
+    footer li:first-of-type a {
+        background-color: #FFFFFF !important;
+    }
+
+    footer {
+        border-top: 0.125em solid #FFFFFF !important;
     }
 }

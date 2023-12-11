@@ -8,6 +8,9 @@ var eersteSectionLink = document.querySelector("section:first-of-type a:first-of
 var headerGetStartedLink = document.querySelector("header a:last-of-type");
 var headerImage = document.querySelector("header img");
 
+var learnAnywhereSection = document.querySelector("section:nth-of-type(4)");
+
+// function en IntersectionObserver voor lijntje onder de header
 function headerScroll(entry) {
     const intersecting = entry.isIntersecting;
     if (intersecting == true) {
@@ -24,7 +27,7 @@ const headerScrollObserver = new IntersectionObserver(entries => {
 headerScrollObserver.observe(eersteSection);
 
 
-
+//function en IntersectionObserver voor get started button in header
 function headerScrollButton (entry) {
     const intersecting = entry.isIntersecting;
     if (intersecting == true) {

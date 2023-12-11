@@ -23,6 +23,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Je focus:
   Surface Plane
+  - Scroll animaties
+  - Animaties
+  - Dark mode
+  - High contrast mode
+  - Audio
  
 </details>
 
