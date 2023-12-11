@@ -181,6 +181,8 @@ Deze bevindingen van de originele website van Duolingo valt er te zien dat er no
   ### Stand van zaken
   Beide pagina's zijn nu allebei zo goed als af, met uitzondering van een paar kleine details. Zo heb ik op de levels pagina een Start wolkje dat een driehoekje moet hebben zodat het lijkt op een tekstwolkje, maar dat driehoekje heb ik nog niet. Ook moet ik nog een aantal dingen voor de Surface plane doen, zoals een dark mode en een hoog contrast mode toevoegen.
 
+  <img src="readme-images/startwolkje.jpg" width="200px" alt="Startwolkje zonder driehoekje">
+
   ### Agenda voor meeting
   samen met je groepje opstellen
 
