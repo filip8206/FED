@@ -342,17 +342,6 @@ footer img {
     height: 4rem;
 }
 
-/* class voor het verbergen van elementen behalve voor de screen reader */
-.visually-hidden {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-}
-
 /* Class voor het verbergen en laten zien van de skip to content button */
 header a:first-of-type {
     left: 0;
@@ -385,7 +374,11 @@ header a:first-of-type:focus {
     }
 
     a {
-        border: 0.125em solid #FFFFFF !important;
+        border: 0.125em solid #FF00FF !important;
+    }
+
+    header.scroll {
+        border-bottom: 0.125em solid #FFFFFF !important;
     }
 
     p a {
