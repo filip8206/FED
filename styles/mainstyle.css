@@ -195,6 +195,8 @@ a {
 
 		--color-greyongrey: #AFAFAF;
 		--color-darkgrey: #777777;
+
+		font-size: 1.25em;
 	}
 
 	body {
@@ -209,5 +211,6 @@ a {
 @media (prefers-reduced-motion) {
 	* {
 		animation: none !important; 
+		scroll-behavior: unset !important;
 	}
 }

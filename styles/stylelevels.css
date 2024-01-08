@@ -491,6 +491,10 @@ footer>a {
     visibility: hidden;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .visible {
     visibility: visible;
 }
@@ -503,6 +507,8 @@ footer>a:active {
     box-shadow: none;
     transform: translateY(0.125em);
 }
+
+
 
 @media (prefers-color-scheme: dark) {
     main ul li:first-of-type>img {
